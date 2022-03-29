@@ -16,9 +16,7 @@ class MyApp extends StatelessWidget {
          // primarySwatch: Colors.blue,
           primaryColor: Colors.lightBlue,
           dividerTheme: const DividerThemeData(
-            space: 3,
-            indent: 5,
-
+            space: 0,
             color: Colors.black45,
           ),
           appBarTheme: const AppBarTheme(
@@ -30,8 +28,10 @@ class MyApp extends StatelessWidget {
           bottomNavigationBarTheme : const BottomNavigationBarThemeData(
             selectedIconTheme: IconThemeData(size : 20),
             unselectedIconTheme: IconThemeData(size : 20),
-            selectedLabelStyle: TextStyle(fontSize:18),
-              showUnselectedLabels : false,
+            selectedLabelStyle: TextStyle(fontSize:14, ),
+            unselectedLabelStyle: TextStyle(fontSize:11),
+
+            showUnselectedLabels : true,
           ),
           textTheme: TextTheme(
 

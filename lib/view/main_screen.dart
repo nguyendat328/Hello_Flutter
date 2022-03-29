@@ -2,8 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/view/home/home.dart';
 
-import '../icons/hello_fluter_icons.dart';
+import '../icons/app_icon_icons.dart';
 import '../utils/Constants.dart';
+import 'library/library.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -43,17 +44,17 @@ class _MainScreen extends State<MainScreen> {
     return Scaffold(
       body: PageView(
         physics: NeverScrollableScrollPhysics(),
-        children: <Widget>[Home()],
+        children: <Widget>[Library()],
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
-            icon: Icon(HelloFluter.book),
-            label: Constants.reading,
+            icon: Icon(AppIcon.book),
+            label: Constants.BTN_READING,
           ),
           BottomNavigationBarItem(
-            icon: Icon(HelloFluter.stackoverflow),
-            label: Constants.library,
+            icon: Icon(AppIcon.stackoverflow),
+            label: Constants.BTN_LIBRARY,
           ),
         ],
         currentIndex: _selectedIndex,
