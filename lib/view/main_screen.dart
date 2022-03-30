@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/view/home/home.dart';
+import 'package:untitled/view/search/search_main.dart';
 
 import '../icons/app_icon_icons.dart';
 import '../utils/Constants.dart';
+import 'bookFilter/bookFilter.dart';
 import 'library/library.dart';
 
 class MainScreen extends StatefulWidget {
@@ -44,7 +46,7 @@ class _MainScreen extends State<MainScreen> {
     return Scaffold(
       body: PageView(
         physics: NeverScrollableScrollPhysics(),
-        children: <Widget>[Library()],
+        children: <Widget>[Home()],
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
@@ -61,6 +63,7 @@ class _MainScreen extends State<MainScreen> {
         selectedItemColor: Theme.of(context).primaryColor,
         onTap: _onItemTapped,
       ),
+
     );
   }
 }

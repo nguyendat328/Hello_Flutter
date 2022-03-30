@@ -3,9 +3,14 @@ class Constants {
   static String BTN_LIBRARY = 'THƯ VIỆN';
   static String BTN_SAVE = 'Đã lưu';
 
+  static String BTN_NAM= 'Quân Tử';
+  static String BTN_NU = 'Thục Nữ';
+
+  static String BTN_SEARCH= 'Tìm Kiếm';
+
 
   static String NEW_BOOK = 'Truyện mới';
-  static String VIEW_BOOK = 'Truyện đọc nhiều ';
+  static String VIEW_BOOK = 'Xem nhiều';
   static String FULL_BOOK = 'Truyện full';
   static String TIEN_HIEP = 'Tiên Hiệp';
   static String HUYEN_HUYEN = 'Huyền Huyễn';

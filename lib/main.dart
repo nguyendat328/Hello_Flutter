@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/view/bookFilter/book_main.dart';
+import 'package:untitled/view/search/search_main.dart';
 import '../view/main_screen.dart';
 
 void main() {
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
          // primarySwatch: Colors.blue,
-          primaryColor: Colors.lightBlue,
+          primaryColor: Colors.cyan[900],
           dividerTheme: const DividerThemeData(
             space: 0,
             color: Colors.black45,
@@ -27,11 +29,11 @@ class MyApp extends StatelessWidget {
               foregroundColor: Colors.black),
           bottomNavigationBarTheme : const BottomNavigationBarThemeData(
             selectedIconTheme: IconThemeData(size : 20),
-            unselectedIconTheme: IconThemeData(size : 20),
+            unselectedIconTheme: IconThemeData(size : 28),
             selectedLabelStyle: TextStyle(fontSize:14, ),
             unselectedLabelStyle: TextStyle(fontSize:11),
 
-            showUnselectedLabels : true,
+            showUnselectedLabels : false,
           ),
           textTheme: TextTheme(
 
@@ -42,7 +44,7 @@ class MyApp extends StatelessWidget {
         )
 
       ),
-      home: MainScreen(),
+      home: SearchMain(),
     );
   }
 }

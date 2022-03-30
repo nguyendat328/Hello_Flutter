@@ -13,25 +13,26 @@ class LibraryItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      autofocus: true,
-      onTap: () {
-        print(item.title);
-      },
-      child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(
-            Radius.circular(0.0),
-          ),
+    return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(0.0),
         ),
-        elevation: 3,
+      ),
+      elevation: 3,
+      child: InkWell(
+        autofocus: true,
+        onTap: () {
+          print(item.title);
+        },
+
         child: Column(
           children: <Widget>[
-            SizedBox(height: 10.0),
+            SizedBox(height: 20.0),
             Icon(
               item.icon,
               color: item.color,
-              size : 40
+              size : 50
             ),
             SizedBox(height: 10.0),
             Flexible(
