@@ -108,7 +108,7 @@ class _ListViewBody extends State<ListViewBody> {
                 onPressed: () {
                   _onItemTapped(2);
                 },
-                child: Text(Constants.BTN_SAVE),
+                child: Text(Constants.BTN_SAVED),
                 style: ButtonStyle(
                   foregroundColor:
                       MaterialStateProperty.all<Color>(selectBtn2 ? Theme.of(context).primaryColor : Colors.black54),
@@ -156,15 +156,19 @@ Widget _buildList(bookListItem) {
 
 class getData {
 
+
+
+
+
   static List<BookItem> dataRes(int btn) {
     BookItem item1 =
-        BookItem('Đấu la đại lục', '1', 'Đường Gia Tam Thiếu', 'Hoàn thành', '20/10/2010', 'Ảnh DLDL', '1252');
+        BookItem('Đấu la đại lục', '1', 'Đường Gia Tam Thiếu', 'Hoàn thành', '20/10/2010', 'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg', '1252');
     BookItem item2 =
         BookItem('Tuyệt Thế Đường Môn', '2', 'Đường Gia Tam Thiếu', 'Hoàn thành', '20/10/2015', 'Ảnh TTDM', '1252');
     BookItem item3 =
         BookItem('Thần Long Chi Truyện', '3', 'Đường Gia Tam Thiếu', 'Hoàn thành', '20/10/2018', 'Ảnh TLKL', '1252');
     BookItem item4 = BookItem('Lạn Kha Ký Duyên', '4', 'Vô Ảnh Sắc QUỷ', 'Hoàn thành', '20/05/2012', 'Ảnh DLDL', '852');
-    BookItem item5 = BookItem('Tương Dạ', '1', 'Miêu Nị', 'Đang ra', '20/10/2019', 'Ngọc Sơn Sơn', '1252');
+    BookItem item5 = BookItem('Tương Dạ', '1', 'Miêu Nị', 'Đang ra', '20/10/2019', 'https://www.nae.vn/ttv/ttv/public/images/story/252b96f137ec651b1ce770994aef9bd79c3eac30ef66ff9ac73a48c481648f6d.jpg', '1252');
     BookItem item6 = BookItem('Gian Khách', '1', 'Miêu Nị', 'Hoàn thành', '20/10/2019', 'Ngọc Sơn Sơn', '352');
     BookItem item7 = BookItem('Thiên A', '1', 'Hồn Thiên', 'Đang ra', '20/10/2019', 'Ảnh 7', '124');
     BookItem item8 = BookItem('Thần Tú', '1', 'Vong Ngữ', 'Hoàn thành', '20/10/2019', 'Ngọc Tiếu', '14152');

@@ -21,7 +21,7 @@ class _BookFilter extends State<BookFilter> {
               IconButton(
                 icon: const Icon(Icons.keyboard_arrow_left, size : 30),
                 onPressed: () {
-                  print('jsndksd');
+                  Navigator.pop(context);
                 },
               )
           ),

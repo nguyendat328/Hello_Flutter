@@ -1,8 +1,12 @@
+//import 'dart:html';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:uuid/uuid.dart';
 
 import '../model/book_list.dart';
+import '../utils/Router.dart';
+import '../view/bookDetail/detail_main.dart';
 
 class BookListItem extends StatelessWidget {
   final BookItem item;
@@ -19,7 +23,8 @@ class BookListItem extends StatelessWidget {
     return InkWell(
       autofocus: true,
       onTap: () {
-        print(item.title + item.id);
+        print(item.title+ item.id);
+        MyRoute.pushPage(context,DetailMain());
       },
       child: Container(
         //color: Colors.white,
@@ -39,8 +44,14 @@ class BookListItem extends StatelessWidget {
                 ),
                 child: Container(
                   height: 120.0,
-                  width: 80.0,
-                  child: Text(item.img),
+                  width: 84.0,
+                  child:  Image(
+                      image: NetworkImage(item.img),
+                      fit: BoxFit.cover,
+                      errorBuilder:  (BuildContext context, Object exception, StackTrace? stackTrace) {
+                        return Image.asset('assets/images/default.jpg', fit: BoxFit.cover,);
+                      }
+                  ),
                 ),
               ),
             ),

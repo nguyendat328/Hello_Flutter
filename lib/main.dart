@@ -1,10 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:untitled/utils/database.dart';
+import 'package:untitled/view/bookDetail/bookDetail.dart';
+import 'package:untitled/view/bookDetail/detail_main.dart';
 import 'package:untitled/view/bookFilter/book_main.dart';
+import 'package:untitled/view/chapter/chap_main.dart';
 import 'package:untitled/view/search/search_main.dart';
 import '../view/main_screen.dart';
+import 'dart:async';
 
-void main() {
+import 'package:path/path.dart';
+import 'package:sqflite/sqflite.dart';
+
+import 'model/book.dart';
+Future<void> main()   async {
+  Hive.registerAdapter(BookChapterAdapter()) ;
+  Hive.registerAdapter(bookhiveAdapter()) ;
+  HiveDatabase.innitHive();
   runApp(const MyApp());
+ // Hive.registerAdapter(book_hive(), 0);
+
 }
 
 class MyApp extends StatelessWidget {
@@ -44,7 +60,10 @@ class MyApp extends StatelessWidget {
         )
 
       ),
-      home: SearchMain(),
+      home: MainScreen(),
     );
   }
+
 }
+
+
